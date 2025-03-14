@@ -1,3 +1,33 @@
+March 13th, 2025
+
+First pass at a script
+
+I wrote a Python script today to add some automation to my .plan file editing, without having to
+always go into my repo itself.  This allows me in future to write an editor plugin that can edit
+the existing buffer and then pipe the output to this Python script to perform the update.
+
+The way that it works is pretty straightforward:
+
+1. Clone the git repo pointing to my "fingerserver" into a temporary directory. 
+   Right now this is hardcoded to my own repo.
+
+2. Check if we have piped input.  If we do, then set our new file contents to whatever is in stdin
+
+3. If we don't have piped input, launch nvim with the cloned file in the temporary directory for editing,
+   and once finished, read the updated file into our file data variable.
+
+4. Update the cloned .plan file with our file data variable.  Yes, this is roundabout with the editor launching,
+   but the editor is temporary and I wanted to get as much of the code flow in as possible right now
+
+5. Commit the update with the current date and time and push it back to the remote repo
+
+Not too bad, I'm using it for this update as well.
+
+The next steps are some customization of the repo URL, and an nvim plugin so we can remove the manual editor
+launch.
+
+-Andrew
+
 March 12th, 2025
 
 First Entry
