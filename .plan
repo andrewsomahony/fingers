@@ -1,3 +1,25 @@
+March 15th, 2025
+
+Finger script written
+
+I wrote the script to fetch someone's gitdotplan files, known back in the day as "fingering"
+a user on a server.  The script wasn't too bad, I just had to re-use the same git cloning code
+that I had written for the updating, but then read the files instead of writing them.  In preparation
+for my future nvim plugin, I included some arguments to pass in to read individual files, like the
+.plan file or the .project file.  This will allow me to run a read command to get the buffer to edit
+for nvim, and then run the update command to update the file, as I also included the same parameters
+in the updater script as well.
+
+I tossed around the idea of allowing any file to be fetched or edited, but did not go that route.
+The reason I didn't want to was that I am implementing something that had a set of files already,
+and the featureset in that regard has no reason to change.  I therefore used an enum to represent
+the possible files.
+
+I need to do a little more polish, checking error codes, etc. for both the finger and update scripts,
+and then I can proceed with the nvim plugin.
+
+-Andrew
+
 March 13th, 2025
 
 First pass at a script
