@@ -1,4 +1,19 @@
+March 15th, 2025 - Continued
+----------------------------
+
+* Utility method to run a subprocess, with a cwd option and a hide_output
+  option
+
+* Better error checking for git commands for both programs, 
+  and the EDITOR command for the updater
+
+* Git repo isn't hardcoded anymore
+
+* Use either a "short" repo or the full URL to the repo as a command
+  line parameter
+
 March 15th, 2025
+----------------
 
 Finger script written
 
@@ -21,6 +36,7 @@ and then I can proceed with the nvim plugin.
 -Andrew
 
 March 13th, 2025
+----------------
 
 First pass at a script
 
@@ -51,6 +67,7 @@ launch.
 -Andrew
 
 March 12th, 2025
+----------------
 
 First Entry
 
