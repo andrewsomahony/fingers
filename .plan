@@ -1,3 +1,29 @@
+Sun Mar 16 21:37:59 CDT 2025
+----------------------------
+
+I got a bit more work done today; I find the biggest challenge is figuring out
+how to do seemingly simple things in Lua like concatenate arrays...
+
+I'm feeling like I'm almost there with a full plugin as well, with some nitpicks
+and polish required to make the editing experience better.
+
+* The updater no longer creates the file you wish to update if it isn't there
+
+* The updater now parses a git repo regardless of if it is short or long
+
+* The plugin now opens the specified finger or edit in a new buffer in 
+  the current window
+
+* The plugin can fetch an update text and load it in non-readonly mode
+
+* Changed the name of the plugin parameter for the repo to update
+
+Perform gitdotplan file update
+
+Set formatting in gitdotplan buffer to string wrap and such, like GITCOMMIT
+
+Validate that the gitdotplan repo to update is writeable
+
 March 15th, 2025 - Continued
 ----------------------------
 
