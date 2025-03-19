@@ -1,4 +1,17 @@
 
+Tue Mar 18 21:56:10 CDT 2025 - Continued
+----------------------------------------
+
+I have updating working via the plugin, which is awesome.  Right now, I feel like I can
+use this thing I've made as I want to use it; I can't wait to have it open while I'm working
+on another project and just typing out an update while looking at the project code for reference...
+
+I need some sort of alert to indicate that the buffer has not been updated.  It seems to not autosave
+the buffer, which is good, so maybe the alert when exiting will be good enough?  I have that and
+some other polish ideas in mind, so I need to just fix as I go, which doubles as testing.
+
++ Perform gitdotplan file update
+
 Tue Mar 18 21:54:53 CDT 2025 - Continued
 ----------------------------------------
 
