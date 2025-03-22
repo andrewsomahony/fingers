@@ -33,6 +33,12 @@ itself from whatever file it may have had.
 
 The test now is to see how it works with this update :D
 
+Update: It worked!  I feel like this plugin is now ready for general use, so if there is a need in the future,
+I'll jump back to it.
+
+Document plugin in README.md
++ Don't save the update files to disk
+
 Tue Mar 18 21:56:10 CDT 2025 - Continued
 ----------------------------------------
 
