@@ -37,6 +37,7 @@ Update: It worked!  I feel like this plugin is now ready for general use, so if 
 I'll jump back to it.
 
 Document plugin in README.md
+Document base Python code in README.md
 + Don't save the update files to disk
 
 Tue Mar 18 21:56:10 CDT 2025 - Continued
@@ -170,6 +171,9 @@ I don't really like blogging or anything like that, so I thought that a resurrec
 server would be more interesting, as it's simple and more open-ended.  Let's see how it goes.
 
 -Andrew
+
+
+
 
 
 
