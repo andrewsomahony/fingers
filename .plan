@@ -1,4 +1,38 @@
 
+Sat Mar 22 17:37:38 CDT 2025
+----------------------------
+
+I spent the week trying to sort out the bug where it saves to the local disk when we are
+preparing an update.  I don't want anything saved to the disk, but I want the buffer to be
+modifiable so that its contents can be piped into the update.py script.
+
+The most obvious thought that came to me, unbeknowest of vim's option sets for buffers, was
+to simply store all the modifiable files in a temporary directory, so when vim or any autosave
+plugin wants to save, it will just save to a hidden folder without much fuss.  This seemed relatively
+straightforward to implement, except it needed a bit of help from the Python side.
+
+When a buffer is fetched, instead of the raw text being returned, the text is saved to a temporary file
+and then the path to that file is returned instead of the data.  I liked this idea, but I didn't like
+the Python scripts having to know or care about files...they should only care about the data they either
+fetch or push, and anything that wants to manipulate that data should create a mechanism to do so.
+
+I then thought of the gitdotplan.nvim plugin having an extra Python script that is called by the plugin
+to perform the actions of fetching and updating.  This script could call the regular Python scripts when
+it needs to do something, and then create a temporary directory, save the fetched data to that directory,
+and return the path.  Then, the NVIM plugin simply has to open that path and it can do what it likes.
+
+I felt this would work, but it was a bit much for something that seemed like it should be obvious to do in
+an editor: make a buffer non-saveable to a file.  Luckily, after some quick searching on buffer options,
+I found what I needed!
+
+vim.api.nvim_buf_set_option(current_buffer_update_number, "buftype", "nofile")
+vim.api.nvim_buf_set_option(current_buffer_update_number, "modifiable", true)
+
+This will make the buffer modifiable, but NVIM will not save it whenever a save is called, as it is disassociating
+itself from whatever file it may have had.
+
+The test now is to see how it works with this update :D
+
 Tue Mar 18 21:56:10 CDT 2025 - Continued
 ----------------------------------------
 
@@ -130,6 +164,9 @@ I don't really like blogging or anything like that, so I thought that a resurrec
 server would be more interesting, as it's simple and more open-ended.  Let's see how it goes.
 
 -Andrew
+
+
+
 
 
 
