@@ -1,3 +1,24 @@
+Sun Apr  6 19:46:36 CDT 2025
+----------------------------
+
+It's been a while since I've updated.  Every time I get ready to update, it's generally at 
+the end of my worktime, which I have done deep into the night, so sleep takes precedence :D
+
+I've been working on my next project.  I'm not quite ready to say what it is, but what I can say
+is that it involves some low level reverse-engineering and some rebuilding of said reverse-engineered
+algorithms in a newer language.  There are 2 parts to the program that I am reverse-engineering, and
+I know that one of them will be rebuilt in Go.
+
+I'm enjoying Go so far: it has the intuitivity of Python but runs natively and has a better concept
+of abstraction and composition, as it wasn't "tacked on" later.  I find that with only a few core
+concepts, such as how to define variables and some things with interfaces, I am writing code very fluidly
+without many breaks to look up syntax.
+
+I want to, in the future, get a Docker container going for my development environment, as 
+then I can control everything on it without screwing up my main development machine.I'll get that sorted at
+some point, right now I'm too into the code :D
+
+-Andrew
 
 Sat Mar 22 17:37:38 CDT 2025
 ----------------------------
@@ -171,6 +192,9 @@ I don't really like blogging or anything like that, so I thought that a resurrec
 server would be more interesting, as it's simple and more open-ended.  Let's see how it goes.
 
 -Andrew
+
+
+
 
 
 
